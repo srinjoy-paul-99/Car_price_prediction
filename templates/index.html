@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+    body{
+        padding: 0px;
+        margin: 0px 0px;
+        background-color: #eee;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    #Nav{
+        color: white;
+        background: #093028;
+        background: -webkit-linear-gradient(to right, #237A57, #093028);
+        background: linear-gradient(to right, #237A57, #093028);
+
+        padding: 15px;
+        height: 70px;
+        text-align: center;
+    }
+    #form{
+        text-align: center;
+    }
+    #rec{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="Nav">
+        <h1>Car Price Predictor</h1>
+    </div>
+    <br>
+    <div id="form">
+    <form action="/recommend" method="POST">
+        <label>Enter car company</label><br>
+        <input type="text" name="company"><br><br>
+        <label>Enter model name</label><br>
+        <input type="text" name=""><br><br>
+        <label>Enter year of purchase</label><br>
+        <input type="text" name="year"><br><br>
+        <label>Enter kilometers driven</label><br>
+        <input type="text" name="kms"><br><br>
+        <label>Enter fuel type</label><br>
+        <input type="text" name="fuel"><br><br>
+        <input type="submit" name="" value="Predict"><br>
+    </form>
+    </div>
+
+    <br><hr>
+    <div id="rec">
+        <h2 style="text-align: centre;">Recomended Price : </h2>
+
+        {{price}}
+
+    </div>
+
+</body>
+</html>
